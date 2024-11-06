@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Statement</title>
+  <style>
+    /* Inline CSS as per static HTML version */
+  </style>
+</head>
+<body>
+  <div class="header"><%= bankName %> Access Advantage Statement</div>
+
+  <div class="section">
+    <p>Statement Number: <%= statementNumber %></p>
+    <p>Period: <%= period %></p>
+  </div>
+
+  <div class="section">
+    <table class="account-details">
+      <tr><th>Account Holder</th><td><%= accountHolder %></td></tr>
+      <tr><th>Branch Number (BSB)</th><td><%= branchNumber %></td></tr>
+      <tr><th>Account Number</th><td><%= accountNumber %></td></tr>
+      <tr><th>Opening Balance</th><td><%= openingBalance %></td></tr>
+      <tr><th>Total Deposits</th><td><%= totalDeposits %></td></tr>
+      <tr><th>Total Withdrawals</th><td><%= totalWithdrawals %></td></tr>
+      <tr><th>Closing Balance</th><td><%= closingBalance %></td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <table class="transactions">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Transaction Details</th>
+          <th>Withdrawals ($)</th>
+          <th>Deposits ($)</th>
+          <th>Balance ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% transactions.forEach(transaction => { %>
+          <tr>
+            <td><%= transaction.date %></td>
+            <td><%= transaction.details %></td>
+            <td><%= transaction.withdrawal %></td>
+            <td><%= transaction.deposit %></td>
+            <td><%= transaction.balance %></td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section fee-summary">
+    <h3>Fee Summary</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Fee Type</th>
+          <th>Total Charged ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% fees.forEach(fee => { %>
+          <tr><td><%= fee.type %></td><td><%= fee.amount %></td></tr>
+        <% }) %>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>For any issues, contact ANZ Customer Service at <%= customerServiceNumber %>.</p>
+  </div>
+</body>
+</html>

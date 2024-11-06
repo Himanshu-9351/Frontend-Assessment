@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Statement</title>
+  <style>
+    body { font-family: Arial, sans-serif; color: #333; }
+    .header { text-align: center; font-size: 1.5em; margin: 20px 0; }
+    .section { margin: 20px; }
+    .account-details, .transactions, .fee-summary { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    .account-details th, .transactions th, .fee-summary th { background: #f2f2f2; padding: 8px; text-align: left; }
+    .account-details td, .transactions td, .fee-summary td { padding: 8px; }
+    .footer { font-size: 0.9em; color: #555; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="header">ANZ Access Advantage Statement</div>
+
+  <div class="section">
+    <p>Statement Number: 8</p>
+    <p>Period: 28 January 2023 to 28 February 2023</p>
+  </div>
+
+  <div class="section">
+    <table class="account-details">
+      <tr><th>Account Holder</th><td>Ms. Michaela Finnegan</td></tr>
+      <tr><th>Branch Number (BSB)</th><td>012-327</td></tr>
+      <tr><th>Account Number</th><td>468441274</td></tr>
+      <tr><th>Opening Balance</th><td>$10,264.79</td></tr>
+      <tr><th>Total Deposits</th><td>$7,405.41</td></tr>
+      <tr><th>Total Withdrawals</th><td>$3,535.00</td></tr>
+      <tr><th>Closing Balance</th><td>$14,135.10</td></tr>
+    </table>
+  </div>
+
+  <div class="section">
+    <table class="transactions">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Transaction Details</th>
+          <th>Withdrawals ($)</th>
+          <th>Deposits ($)</th>
+          <th>Balance ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>28 Jan</td><td>ANZ ATM Branch Griffith</td><td>100.00</td><td></td><td>10,364.69</td></tr>
+        <tr><td>31 Jan</td><td>Internet Banking Transfer - Wages</td><td></td><td>947.39</td><td>11,312.08</td></tr>
+        <tr><td>01 Feb</td><td>ANZ ATM Withdrawal</td><td>50.00</td><td></td><td>11,262.08</td></tr>
+        <tr><td>01 Feb</td><td>Reversal of Account Service Fee</td><td></td><td>5.00</td><td>11,267.08</td></tr>
+        <tr><td>02 Feb</td><td>Account Service Fee</td><td>5.00</td><td></td><td>11,262.08</td></tr>
+        <tr><td>04 Feb</td><td>Transfer from Nasarudin</td><td></td><td>165.50</td><td>11,427.58</td></tr>
+        <tr><td>05 Feb</td><td>Mobile Banking Payment to SapioDin</td><td>50.00</td><td></td><td>11,377.58</td></tr>
+        <tr><td>07 Feb</td><td>Internet Banking Transfer - Wages</td><td></td><td>1,266.66</td><td>12,644.24</td></tr>
+        <tr><td>10 Feb</td><td>ANZ ATM Withdrawal</td><td>50.00</td><td></td><td>12,594.24</td></tr>
+        <tr><td>14 Feb</td><td>Internet Banking Transfer - Wages</td><td></td><td>1,294.09</td><td>13,888.33</td></tr>
+        <!-- Additional transactions would be here -->
+      </tbody>
+    </table>
+  </div>
+
+  <div class="section fee-summary">
+    <h3>Fee Summary</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Fee Type</th>
+          <th>Total Charged ($)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Monthly Account Service Fee</td><td>5.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    <p>For any issues, contact ANZ Customer Service at 13 13 14.</p>
+  </div>
+</body>
+</html>
